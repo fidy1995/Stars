@@ -585,13 +585,13 @@ public class Sky : MonoBehaviour {
 
         for (int i = 0; i < 571; i++)
         {
-            //if (data[i].deg <= 3.5)
+            if (data[i].deg <= 3.5)
             {
                 s[i] = Instantiate(GameObject.Find("Star"));
                 //s[i].transform.rotation = Quaternion.Euler(new Vector3(0, (float)data[i].cj, (float)data[i].cw));
                 s[i].transform.Rotate(0, -(float)data[i].cj, 0);
                 s[i].transform.Rotate(0, 0, (float)data[i].cw);
-                float radius = ((float)-data[i].deg + 3) / 4.0f + 0.6f;
+                float radius = ((float)-data[i].deg + 3) / 6.0f + 0.3f;
                 s[i].transform.GetChild(1).transform.localScale = new Vector3(radius, radius, radius);
             } 
         }
