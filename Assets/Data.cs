@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace dpp
 {
-    public class Data : MonoBehaviour
+    public class Data
     {
         public int no { get; set; }
         public double cj { get; set; }
