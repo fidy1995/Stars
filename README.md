@@ -24,6 +24,10 @@ Jincai are well-known, but it's losing its advantages. By making this applicatio
 
 - Make lighting easier to render by using directional lights, not point lights. And also, removing lens flares.
 
+- Make meteors less and faster to become more realistic.
+
+- Make the size of stars neither too small nor too big, to improve the feelings of viewing.
+
 ### Version 1.1
 - Fixed a bug that cause the constellations to become image symmetrical.
 
