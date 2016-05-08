@@ -685,6 +685,7 @@ public class Cardboard : MonoBehaviour {
   }
 
   void OnApplicationQuit() {
+    OnDestroy();
     device.OnApplicationQuit();
   }
 

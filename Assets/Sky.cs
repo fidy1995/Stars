@@ -5,10 +5,11 @@ using System.Collections;
 public class Sky : MonoBehaviour {
     private Data[] data;
     private GameObject[] s;
+    private GameObject sphere;
 
 	// Use this for initialization
 	void Start () {
-        
+        sphere = new GameObject();
         s = new GameObject[571];
         data = new Data[571];
         data[0] = new Data(13209, 42.496, 27.2605, 3.612);
@@ -585,20 +586,24 @@ public class Sky : MonoBehaviour {
 
         for (int i = 0; i < 571; i++)
         {
-            if (data[i].deg <= 3.5)
+            //if (data[i].deg <= 3.5)
             {
                 s[i] = Instantiate(GameObject.Find("Star"));
-                //s[i].transform.rotation = Quaternion.Euler(new Vector3(0, (float)data[i].cj, (float)data[i].cw));
                 s[i].transform.Rotate(0, -(float)data[i].cj, 0);
                 s[i].transform.Rotate(0, 0, (float)data[i].cw);
-                float radius = ((float)-data[i].deg + 3) / 6.0f + 0.3f;
-                s[i].transform.GetChild(1).transform.localScale = new Vector3(radius, radius, radius);
+                float radius = ((float)-data[i].deg + 3) / 4.5f + 0.6f;
+                s[i].transform.GetChild(0).transform.localScale = new Vector3(radius, radius, radius);
+                s[i].transform.parent = sphere.transform;
             } 
         }
+        sphere.transform.Rotate(0, 0, 59.0f);
+        System.Random r = new System.Random(unchecked((int)System.DateTime.Now.Ticks));
+        float y = (float)r.Next() / 360.0f;
+        sphere.transform.Rotate(0, y, 0);
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }

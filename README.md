@@ -15,12 +15,14 @@ Jincai are well-known, but it's losing its advantages. By making this applicatio
 
 ## Update log
 
-### Version 1.2 - now on construction
-- Deleted annoying trees, now you are at the sea side.
+### Version 1.2
+- Deleted annoying trees, now you are at the seaside.
 
 - Move the Polaris to declination 31°, in order to provide the view of Shanghai, but I'm not considering adding Jinmao Building XDDDDD
 
-- Still trying to spin the sky sphere in order to make a real view, but failed.
+- Now every time you open the APP, the sky sphere will spin a random angle to provide different views.
+
+- Make lighting easier to render by using directional lights, not point lights. And also, removing lens flares.
 
 ### Version 1.1
 - Fixed a bug that cause the constellations to become image symmetrical.

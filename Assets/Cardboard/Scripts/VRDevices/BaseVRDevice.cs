@@ -208,7 +208,8 @@ public abstract class BaseVRDevice {
   }
 
   public virtual void OnApplicationQuit() {
-    // Do nothing.
+        // Do nothing.
+        Application.Quit();
   }
 
   public virtual void Destroy() {
