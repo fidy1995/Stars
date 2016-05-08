@@ -586,7 +586,7 @@ public class Sky : MonoBehaviour {
 
         for (int i = 0; i < 571; i++)
         {
-            if (data[i].deg <= 3.5)
+            //if (data[i].deg <= 3.5)
             {
                 s[i] = Instantiate(GameObject.Find("Star"));
                 s[i].transform.Rotate(0, -(float)data[i].cj, 0);
